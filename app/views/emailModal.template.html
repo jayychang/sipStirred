@@ -1,0 +1,21 @@
+<div class="modal-body">
+  <div class="text-center" >
+    <div class="m-font">
+      {{modal.title}}
+    </div>
+    <div class="s-font">
+      {{modal.body}}
+    </div>
+    <div class="form-group">
+      <form name="form">
+        <input name="input" type="email" ng-pattern="emailFormat" class="form-control margintop30" placeholder="Enter Email" ng-model="emailString">
+      </form>
+    </div>
+    <div>
+      <button class="email-submit-button m-font margintop10" ng-click="submitEmail(emailString, form.input.$valid)">Join</button>
+    </div>
+    <div class="xs-font margintop10">
+      {{modal.footer}}
+    </div>
+  </div>
+</div>

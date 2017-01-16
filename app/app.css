@@ -1,0 +1,291 @@
+html {
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+body {
+  /*font-size: 20px;*/
+  margin: 0;
+  padding: 0;
+}
+
+span {
+  margin: 0;
+  padding: 0;
+  display:inline-block;
+}
+
+footer {
+  margin-top: 40px;
+}
+
+/* ========================== home ========================== */
+.home-background {
+  background: url("asset/homeBackground.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.join-button {
+  background: none;
+  border: 5px solid white;
+  vertical-align: middle;
+  left: 150px;
+  top: 80px;
+  padding: 10px 15px;
+  margin-top: 5%;
+}
+
+.video-description {
+  padding: 0 5vw;
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.video-description span {
+  width: 1%;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* ========================== modal ========================== */
+
+.modal-body {
+  min-height: 250px;
+}
+
+.modal-content  {
+  -webkit-border-radius: 1px !important;
+  -moz-border-radius: 1px !important;
+  border-radius: 1px !important;
+}
+
+div.modal-dialog {
+  margin-top: 20vh !important;
+}
+
+.modal-backdrop {
+  background-color: white !important;
+  transition:opacity .3s !important;
+}
+
+.modal-content{
+  -webkit-box-shadow: 0 5px 15px rgba(0,0,0,0);
+  -moz-box-shadow: 0 5px 15px rgba(0,0,0,0);
+  -o-box-shadow: 0 5px 15px rgba(0,0,0,0);
+  box-shadow: 0 5px 15px rgba(0,0,0,0);
+  border: 2px solid black;
+}
+
+.form-control {
+  width: 70%;
+  margin: 0 auto;
+  padding: 3%;
+  border: 2px solid black;
+  box-shadow: none;
+  border-radius: 1px;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 5px grey;
+  border-color: black;
+}
+
+.email-submit-button {
+  width: 50%;
+  background: grey;
+  border: none;
+  color: white;
+}
+
+/* ========================== location ========================== */
+
+.location-background {
+  background: url("asset/homeBackground.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;  min-height: 100vh;
+  width: : 100vh;
+}
+
+.dropdown {
+  position: relative;
+  margin: 0 auto;
+  transition: all 0.3s f;
+
+  cursor: pointer;
+  outline: none;
+  z-index: 100;
+  border-bottom: 2px solid black;
+}
+
+.dropdown .dropdown-item {
+  position: absolute;
+  top: 100%;
+  width: 200px;
+  transition: all 0.3s ease-out;
+  list-style: none;
+  padding-left:0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dropdown.active {
+  border-bottom: 0px;
+}
+
+.dropdown.active .dropdown-item {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.location {
+  transition: all 0.3s ease-out;
+}
+
+.location.active {
+  opacity: 0;
+}
+
+.location-box {
+  width: 300px;
+  height:300px;
+  background: url("asset/place.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 50px auto;
+  position:relative;
+}
+
+.location-info-box {
+  width: 100%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  bottom:0;
+  color: white;
+  padding: 10px;
+}
+
+.request-invite-button {
+  background: none;
+  border: 2px solid white;
+  vertical-align: middle;
+/*  padding: 10px 15px;
+*/  margin-top: 5%;
+}
+
+/* ========================== shared ========================== */
+.xl-font {
+  font-size: 50px;
+}
+
+.l-font {
+  font-size: 40px;
+}
+
+.m-font {
+  font-size: 30px;
+}
+
+.s-font {
+  font-size: 20px;
+}
+
+.xs-font {
+  font-size: 10px;
+}
+
+.align-top-centered-absolute {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.align-top-centered-relative {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.l-logo {
+  width: 100px;
+  height: 100px;
+}
+
+.m-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.margin10 {
+  margin: 10px;
+}
+
+.margin50 {
+  margin: 50px
+}
+
+.rightmargin20 {
+  margin-right: 20px;
+}
+
+.cursor-pointer {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.grey {
+  color: grey;
+}
+
+.flex {
+  display: flex;
+}
+
+.margintop10 {
+  margin-top: 10px;
+}
+
+.margintop30 {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 767px) {
+    .hidden-xs {
+        display:none;
+    }
+}
+/* ========================================= */
+
+/*.margin80 {
+  padding: 0 10%;
+}*/
+/*@media (max-width: @screen-xs) {
+    body{font-size: 5px;}
+}
+
+@media (max-width: @screen-sm) {
+    body{font-size: 15px;}
+}*/
+
+/*animation*/
+
+/*.page.ng-leave 	{ z-index:9999; }
+.page.ng-enter 	{ z-index:8888; }
+
+.page-contact.ng-enter 		{
+  -webkit-animation:slideInUp 0.5s both ease-in;
+	-moz-animation:slideInUp 0.5s both ease-in;
+	animation:slideInUp 0.5s both ease-in;
+}*/

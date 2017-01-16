@@ -1,0 +1,46 @@
+<div class="container-fluid">
+  <div class="row home-background">
+    <img class="align-top-centered-absolute l-logo margin10" src="asset/logo.png" alt="Sip + Stirred">
+      <div class="col-xs-12">
+        <div class="text-center xl-font">
+          {{splash.title}}
+        </div>
+        <div class="row">
+          <div class="col-xs-2"></div>
+          <div class="col-xs-8">
+            <div class=" m-font text-center">
+              {{splash.body}}
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <button class="join-button l-font" ng-click="joinEvent()">{{splash.button}}</button>
+        </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-xs-12 col-sm-10">
+      <img class="align-top-centered-relative m-logo margin10" src="asset/logo.png" alt="Sip + Stirred">
+      <div class="text-center xl-font margin50">
+        SIP + STIRRED MIXOLOGY
+      </div>
+      <div class="video-description s-font">
+        <span>Previous Episodes:</span>
+        <span class="grey" ng-repeat="video in previousVideos" ng-click="changeVideo(video.url)">
+          <div class="cursor-pointer">
+            {{video.title}}
+          </div>
+        </span>
+      </div>
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" ng-src="{{youtubeURL}}"></iframe>
+      </div>
+    </div>
+  </div>
+  <footer class="row">
+    <div class="text-center s-font margin10">
+      SIP + STIRRED 2016
+    </div>
+  </footer>
+</div>

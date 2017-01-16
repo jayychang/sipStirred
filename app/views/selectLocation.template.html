@@ -1,0 +1,28 @@
+<div class="location-background">
+  <div class="container">
+    <img class="align-top-centered-relative m-logo margin10" src="asset/logo.png" alt="Sip + Stirred">
+    <div class="flex xl-font">
+      <span class="hidden-xs">I want to party in&nbsp;</span>
+      <span>
+        <div class="dropdown" ng-click="toggleDropDown()" ng-class="{'active' : toggle}"> {{selectedArea}}
+  	       <ul class="dropdown-item">
+		          <li ng-repeat="area in areas">
+                <div ng-click="clickDropDownItem(area)">{{area.name}}</div>
+              </li>
+	         </ul>
+        </div>
+      </span>
+    </div>
+    <div class="row location active" ng-class="{'active' : toggle}">
+    	<div class="col-md-4" ng-repeat="location in locations">
+    		<div class="location-box" ng-click="areaToggle = !areaToggle">
+          <div class="location-info-box" ng-show="areaToggle" ng-click="$event.stopPropagation()" >
+            <div class="m-font">{{location.name}}</div>
+            <div class="s-font grey"><span style="width:100px">{{location.date}}</span>{{location.time}}</div>
+            <button class="request-invite-button" ng-click="requestInvite(location.inviteStatus); location.inviteStatus = true">{{ location.inviteStatus == false ? 'Request Invite' : 'Invite Sent' }}</button>
+          </div>
+    		</div>
+    	</div>
+    </div>
+  </div>
+</div>
