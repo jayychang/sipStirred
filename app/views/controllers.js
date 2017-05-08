@@ -16,21 +16,21 @@ let stringsJSON =
 let youtubeJSON =
 {
   "current" : {
-    "title" : "current title",
-    "url" : "https://www.youtube.com/embed/pd3eV-SG23E?list=RDxO4bMgd3ZCY"
+    "title" : "Today's",
+    "url" : "https://www.youtube.com/embed/q-gYcvipozY"
   },
   "previous" : [
     {
-      "title" : "Belini",
-      "url" : "https://www.youtube.com/embed/ADvuyBcB1J8?list=RDxO4bMgd3ZCY"
+      "title" : "Bellini",
+      "url" : "https://www.youtube.com/embed/yfpz9TgKNls"
     },
     {
-      "title" : "apple juice",
-      "url" : "https://www.youtube.com/embed/xO4bMgd3ZCY?list=RDxO4bMgd3ZCY"
+      "title" : "Bloody Mary",
+      "url" : "https://www.youtube.com/embed/wwOtn1oxPIM"
     },
     {
-      "title" : "orange juice",
-      "url" : "https://www.youtube.com/embed/EHiBVetMVYA?list=RDxO4bMgd3ZCY"
+      "title" : "Old Fashioned",
+      "url" : "https://www.youtube.com/embed/joqDgv35w1Y"
     }
   ]
 }
@@ -43,25 +43,25 @@ let userJSON =
       "name": "Burnaby",
       "locations" : [
         {
-          "name": "burnaby1",
-          "date": "date1",
-          "time": "time 1",
+          "name": "Great Bear Pub",
+          "date": "Nov 15",
+          "time": "Kingsway St",
           "inviteStatus": true
           // "image": "image",
           // "endpoint": "url"
         },
         {
-          "name": "burnaby2",
-          "date": "date2",
-          "time": "time 2",
+          "name": "FF Public House",
+          "date": "March 4",
+          "time": "Bonsor Ave",
           "inviteStatus": true
           // "image": "image",
           // "endpoint": "url"
         },
         {
-          "name": "burnaby3",
-          "date": "date3",
-          "time": "time 3",
+          "name": "Oliver Twist",
+          "date": "July 28",
+          "time": "Edmunds St",
           "inviteStatus": false
           // "image": "image",
           // "endpoint": "url"
@@ -72,25 +72,25 @@ let userJSON =
       "name": "Vancouver",
       "locations" : [
         {
-          "name": "van1",
-          "date": "date4",
-          "time": "time 4",
+          "name": "Doolin's Irish",
+          "date": "Feb 27",
+          "time": "Nelson St",
           "inviteStatus": false
           // "image": "image",
           // "endpoint": "url"
         },
         {
-          "name": "van2",
-          "date": "date2",
-          "time": "time 5",
+          "name": "The Morrissey",
+          "date": "Aug 21",
+          "time": "Granville St",
           "inviteStatus": false
           // "image": "image",
           // "endpoint": "url"
         },
         {
-          "name": "van3",
-          "date": "date5",
-          "time": "time 6",
+          "name": "Black Frog",
+          "date": "May 4",
+          "time": "Cambie St",
           "inviteStatus": false
           // "image": "image",
           // "endpoint": "url"
@@ -101,25 +101,25 @@ let userJSON =
       "name": "Surrey",
       "locations" : [
         {
-          "name": "surrey1",
-          "date": "date1",
-          "time": "time 7",
+          "name": "Sammy J's",
+          "date": "June 12",
+          "time": "Croydon Dr",
           "inviteStatus": false
           // "image": "image",
           // "endpoint": "url"
         },
         {
-          "name": "surrey2",
-          "date": "date 2",
-          "time": "time 8",
+          "name": "Big Ridge",
+          "date": "Sept 30",
+          "time": "152 St",
           "inviteStatus": false
           // "image": "image",
           // "endpoint": "url"
         },
         {
-          "name": "surrey3",
-          "date": "date 3",
-          "time": "time 9",
+          "name": "Green Timbers",
+          "date": "April 18",
+          "time": "148 St",
           "inviteStatus": false
           // "image": "image",
           // "endpoint": "url"
@@ -155,8 +155,8 @@ app.controller("emailModalController", function ($scope, $location, $uibModalIns
   $scope.modal = stringsJSON.modal;
   $scope.emailFormat = /^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/;
   $scope.submitEmail = function(emailString, valid) {
-    if(!valid) {
-      alert("invalid email temperory alert to check, can change css of the input box to be red border");
+    if(!valid || emailString == "" || emailString == null) {
+      alert("Invalid email");
       return;
     }
     email = emailString;
@@ -180,7 +180,7 @@ app.controller("locationController", function ($scope) {
   }
   $scope.requestInvite = function(bool) {
     if(!bool) {
-      alert("invite sent- testing alert maybe create custom alert");
+      alert("A detailed invitation has been sent. Please check your Email. We hope to see you there :)");
     }
   }
 });
